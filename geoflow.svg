@@ -1,0 +1,65 @@
+<svg width="200" height="230" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Define gradients for the sky background -->
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:lightblue;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:blue;stop-opacity:1" />
+    </linearGradient>
+    <!-- Define a fancy hand-written font -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+      .handwritten-font {
+        font-family: 'Pacifico', cursive;
+      }
+      .fa {
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+      }
+      .bold-text {
+        font-weight: bolder;
+      }
+      .purple {
+        fill: #800080;
+      }
+      .arrow {
+        fill: lightblue;
+      }
+    </style>
+    <!-- Arrow marker definition -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="lightblue"/>
+    </marker>
+  </defs>
+  <!-- Hexagon background with shaded blue gradient -->
+  <polygon points="100,10 180,60 180,160 100,210 20,160 20,60" fill="url(#skyGradient)" stroke="white" stroke-width="5"/>
+  
+  <!-- LOD cloud icon as background -->
+  <text x="100" y="155" font-size="100" fill="white" text-anchor="middle" opacity="0.16" class="fa">&#xf0c2;</text>
+  
+  <!-- Arcs linking placemarks with arrows -->
+  <path d="M 55,90 Q 100,50 145,90" stroke="lightblue" stroke-width="3" fill="none" marker-mid="url(#arrowhead)"/>
+  <path d="M 145,90 Q 122,130 100,165" stroke="lightblue" stroke-width="3" fill="none" marker-mid="url(#arrowhead)"/>
+  <path d="M 55,90 Q 77,130 100,165" stroke="lightblue" stroke-width="3" fill="none" marker-mid="url(#arrowhead)"/>
+  
+  <!-- Geospatial markers -->
+  <circle cx="55" cy="90" r="20" fill="lightblue" stroke="white" stroke-width="3"/>
+  <circle cx="145" cy="90" r="20" fill="lightblue" stroke="white" stroke-width="3"/>
+  <circle cx="100" cy="165" r="20" fill="lightblue" stroke="white" stroke-width="3"/>
+  
+  <!-- Icons inside the circles -->
+  <!-- Database icon -->
+  <text x="55" y="98" font-size="20" fill="white" text-anchor="middle" class="fa">&#xf1c0;</text>
+  <!-- DOI icon -->
+  <text x="145" y="95" font-size="14" fill="white" text-anchor="middle" class="bold-text">DOI</text>
+  <!-- Map icon -->
+  <text x="100" y="171" font-size="20" fill="white" text-anchor="middle" class="fa">&#xf5a0;</text>
+  
+  <!-- Gears icon in the middle, bigger size -->
+  <text x="99" y="125" font-size="40" fill="#800080" text-anchor="middle" class="fa">&#xf085;</text>
+  
+  <!-- 'geo' in simple text and 'flow' in bold text just above the two top circles -->
+  <text x="100" y="53" font-size="24" fill="white" text-anchor="middle" class="handwritten-font">
+    <tspan class="handwritten-font">geo</tspan><tspan class="handwritten-font bold-text">flow</tspan>
+  </text>
+</svg>
